@@ -1,0 +1,50 @@
+import random
+list=["taş","kağıt","makas"]
+taş=list[0]
+kağıt=list[1]
+makas=list[2]
+print("OYUNA HOŞ GELDİNİZ...")
+bSonuc = 0
+Sonuc = 0
+el = 1
+tur = int(input("Tur sayısını belirleyiniz:"))
+while tur>=el:
+    secim = input("Taş-kağıt-makas? ")
+    bilSecim = random.choice(list)
+    if secim==taş:
+        if bilSecim==taş:
+            print("Bilgisayarın seçimi: Taş")
+        elif bilSecim==kağıt:
+            print("Bilgisayarın seçimi: Kağıt")
+            bSonuc += 1
+        else:
+            print("Bilgisayarın seçimi: makas")
+            Sonuc += 1
+    if secim==kağıt:
+        if bilSecim==taş:
+            print("Bilgisayarın seçimi: Taş")
+            Sonuc += 1
+        elif bilSecim==kağıt:
+            print("Bilgisayarın seçimi: Kağıt")
+        else:
+            print("Bilgisayarın seçimi: makas")
+            bSonuc += 1
+    if secim==makas:
+        if bilSecim==taş:
+            print("Bilgisayarın seçimi: Taş")
+            bSonuc += 1
+        elif bilSecim==kağıt:
+            print("Bilgisayarın seçimi: Kağıt")
+            Sonuc += 1
+        else:
+            print("Bilgisayarın seçimi: makas")
+    tur -= 1
+
+if Sonuc > bSonuc:
+    print(f"{Sonuc}-{bSonuc}.")
+    print(f"{Sonuc - bSonuc} ile kazandınız.")
+elif bSonuc>Sonuc:
+    print(f"{bSonuc}-{Sonuc}.")
+    print(f"{bSonuc - Sonuc} fark ile kaybettiniz.")
+else:
+    print("berabere bitti")
