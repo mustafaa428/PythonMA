@@ -10,7 +10,7 @@ def carp(x,y):
 def böl(x,y):
     sonuc = x / y
     return sonuc
- //MA428
+ #MA428
 while True:
     islem = input("hangi işlemi yapmayı istiyorsunuz(+,-,*,/):")
     a = int(input("1. değer:"))
@@ -34,4 +34,4 @@ while True:
     else:
         print("işlem yapılmadı...")
         break
-        //MA428
+        #MA428
