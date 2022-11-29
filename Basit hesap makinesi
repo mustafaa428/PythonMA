@@ -1,0 +1,37 @@
+def Topla(x, y):
+    sonuc = x+y
+    return sonuc
+def cikar(x,y):
+    sonuc = x - y
+    return sonuc
+def carp(x,y):
+    sonuc = x * y
+    return sonuc
+def böl(x,y):
+    sonuc = x / y
+    return sonuc
+ //MA428
+while True:
+    islem = input("hangi işlemi yapmayı istiyorsunuz(+,-,*,/):")
+    a = int(input("1. değer:"))
+    b = int(input("2. değer:"))
+    if islem == '+':
+        Toplam = Topla(a, b)
+        print(Toplam)
+
+    elif islem =='-':
+        Çıkarma = cikar(a, b)
+        print(Çıkarma)
+
+    elif islem == '*':
+        Çarpma = carp(a, b)
+        print(Çarpma)
+
+    elif islem == '/':
+        bölme = böl(a, b)
+        print(bölme)
+
+    else:
+        print("işlem yapılmadı...")
+        break
+        //MA428
